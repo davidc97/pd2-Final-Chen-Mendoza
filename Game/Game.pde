@@ -1,43 +1,22 @@
-import processing.opengl.*;
-import java.util.Hashtable;
-
-import hermes.*;
-import hermes.hshape.*;
-import hermes.animation.*;
-import hermes.physics.*;
-import hermes.postoffice.*;
-
-///////////////////////////////////////////////////
-// CONSTANTS
-///////////////////////////////////////////////////
-/**
- * Constants should go up here
- * Making more things constants makes them easier to adjust and play with!
- */
-static final int WINDOW_WIDTH = 600;
-static final int WINDOW_HEIGHT = 600;
-static final int PORT_IN = 8080;
-static final int PORT_OUT = 8000; 
-int temp;
-World currentWorld;
-Camera cam;
-PostOffice po;
-//PlatformGroup platforms;
-Player player;
-
-///////////////////////////////////////////////////
-// PAPPLET
-///////////////////////////////////////////////////
-
-void setup() {
-  size(WINDOW_WIDTH, WINDOW_HEIGHT); 
-  Hermes.setPApplet(this);
-  po = new PostOffice();
-  cam = new Camera();
-  currentWorld = new World1(po, cam);       
-  currentWorld.start(); // this should be the last line in setup() method
+PImage startscreen;
+PImage background1;
+PImage test;
+PImage temp;
+PFont title;
+int screensizex, screensizey, stage;
+//stage will be how we move from title screen to game
+void setup(){
+  stage = 1;
+  screensizex = 512;  
+  screensizey = 432;
+  size(screensizex, screensizey);
+  //the background i put is just to test
+  //we can make one with our game title and stuff
+  startscreen = loadImage("graphics/start.gif");
+  background1 = loadImage("graphics/background1.jpeg");
+  image(startscreen, 0, 0, screensizex, screensizey);
+  title = createFont("font",1000,true);
 }
-<<<<<<< HEAD
 void draw(){
   if(stage ==1){
     textAlign(CENTER);
@@ -50,12 +29,5 @@ void draw(){
   if(stage==2){
     image(background1,0,0, screensizex, screensizey);
   }
-}
   
-=======
->>>>>>> afb1ee524edbbf8dd0549895b26f713940bca96d
 
-void draw() {
-  background(230);
-  currentWorld.draw();
-}
