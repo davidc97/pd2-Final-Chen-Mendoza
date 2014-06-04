@@ -1,4 +1,5 @@
-pd2-Final-Chen-Mendoza
-======================
+Collaborators:
+David Chen
+Adriel Mendoza
 
-APCS Final Project Pd 2 Spring Term
+Log:

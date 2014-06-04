@@ -1,7 +1,6 @@
 PImage startscreen;
 PImage background1;
 PImage test;
-PImage temp;
 PFont title;
 int screensizex, screensizey, stage;
 //stage will be how we move from title screen to game
