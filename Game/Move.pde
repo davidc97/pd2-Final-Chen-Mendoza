@@ -8,11 +8,25 @@ class Move{
   }
   
   //calculates how much damage was done for each move
-  int damageCalc(int base, int attack, int defense){
-    return (int)(base * (.01) * (1.0 * attack / defense));
+  int damageCalc(int base, int attack, int defense, String myState, String myState2, String theirState2){
+    int damage = 0;
+    damage = (int)(base * (.01) * (1.0 * attack / defense));
+    //checks if the user is jinxed
+    if(myState.equals("jinxed")){
+      damage = damage * -1;
+    }
+    //checks if the user has flexed
+    if(myState2.equals("flexed")){
+      damage = damage * 2;
+    }
+    //checks if the opponent is protected
+    if(theirState2.equals("protected")){
+      damage = 0;
+    }
+    return damage;
   }
   
-  void do(Monster attack, Monster defend){
+  void effect(Monster attack, Monster defend){
     int damage;
     //checks if the monster may still use this move
     if(uses == 0){
