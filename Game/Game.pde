@@ -27,5 +27,6 @@ void draw(){
   if(stage==2){
     image(background1,0,0, screensizex, screensizey);
   }
+}
   
 

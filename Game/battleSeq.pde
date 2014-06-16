@@ -8,5 +8,6 @@ class battleSeq{
       a = b;
       b = temp;
     }
-    
       
+  }
+}
