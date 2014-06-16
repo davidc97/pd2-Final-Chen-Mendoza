@@ -1,5 +1,8 @@
-import processing.opengl.*;
-import java.util.Hashtable;
+/**
+ * Tutorial example 1
+ * Beings doing stuff!
+ * https://github.com/rdlester/hermes/wiki/Tutorial-Pt.-2:-A-Simple-World
+ */
 
 import hermes.*;
 import hermes.hshape.*;
@@ -20,25 +23,27 @@ static final int PORT_IN = 8080;
 static final int PORT_OUT = 8000; 
 
 World currentWorld;
-Camera cam;
-PostOffice po;
-//PlatformGroup platforms;
-Player player;
+
+/**
+ * Add groups here if you need custom group behavoir
+ */
 
 ///////////////////////////////////////////////////
 // PAPPLET
 ///////////////////////////////////////////////////
 
 void setup() {
-  size(WINDOW_WIDTH, WINDOW_HEIGHT); 
+  size(WINDOW_WIDTH, WINDOW_HEIGHT);
+  background(0); 
   Hermes.setPApplet(this);
-  po = new PostOffice();
-  cam = new Camera();
-  currentWorld = new World1(po, cam);       
+
+  currentWorld = new TutorialWorld(300);       
+
+  //Important: don't forget to add setup to TemplateWorld!
+
   currentWorld.start(); // this should be the last line in setup() method
 }
 
 void draw() {
-  background(230);
   currentWorld.draw();
 }
