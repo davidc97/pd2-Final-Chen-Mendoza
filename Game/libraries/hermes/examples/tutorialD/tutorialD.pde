@@ -1,5 +1,8 @@
-import processing.opengl.*;
-import java.util.Hashtable;
+/**
+ * Tutorial 4
+ * PostOffice / mouse+keyboard inputs - speak to me!
+ * https://github.com/rdlester/hermes/wiki/Tutorial-Pt.-5:-Post-Office-&-User-Input
+ */
 
 import hermes.*;
 import hermes.hshape.*;
@@ -20,42 +23,31 @@ static final int PORT_IN = 8080;
 static final int PORT_OUT = 8000; 
 
 World currentWorld;
-Camera cam;
-PostOffice po;
-//PlatformGroup platforms;
-Player player;
+
+/**
+ * Add groups here if you need custom group behavoir
+ */
 
 ///////////////////////////////////////////////////
 // PAPPLET
 ///////////////////////////////////////////////////
 
 void setup() {
-  size(WINDOW_WIDTH, WINDOW_HEIGHT); 
+  size(WINDOW_WIDTH, WINDOW_HEIGHT);
+  background(0); 
   Hermes.setPApplet(this);
-  po = new PostOffice();
-  cam = new Camera();
-  currentWorld = new World1(po, cam);       
+
+  currentWorld = new TutorialWorld(10);
+
   currentWorld.start(); // this should be the last line in setup() method
 }
-<<<<<<< HEAD
-void draw(){
-  if(stage ==1){
-    textAlign(CENTER);
-    text("Redemption",200,100);
-    text("Press any key to start game",200,170);
-    if (keyPressed == true){
-      stage = 2;
-    }
-  }
-  if(stage==2){
-    image(background1,0,0, screensizex, screensizey);
-  }
-}
-  
-=======
->>>>>>> afb1ee524edbbf8dd0549895b26f713940bca96d
 
 void draw() {
-  background(230);
   currentWorld.draw();
 }
+
+/*void keyPressed() {
+  currentWorld.deactivate();
+  currentWorld = new TutorialWorld((int)random(1000));
+  currentWorld.start();
+}*/
