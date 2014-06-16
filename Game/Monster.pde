@@ -78,7 +78,7 @@ class Monster{
   
   //performs the user's desired move
   void performMove(Move move, Monster attack, Monster defend){
-    move.do(attack, defend);
+    move.effect(attack, defend);
   }
   
   //this will import the sprites
