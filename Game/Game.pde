@@ -18,7 +18,7 @@ static final int WINDOW_WIDTH = 600;
 static final int WINDOW_HEIGHT = 600;
 static final int PORT_IN = 8080;
 static final int PORT_OUT = 8000; 
-
+int temp;
 World currentWorld;
 Camera cam;
 PostOffice po;
