@@ -1,4 +1,0 @@
-Log:
-
-6/3/14: Created the basic premise for game; began to brainstorm possible ideas
-6/4/14: Debated which data structures would be appropriate for the game
