@@ -10,4 +10,8 @@ class PlatformCollider extends GenericMassedCollider<Player, Platform>{
     player.resetJump(); //reset jump
     super.handle(player, platform); //GenericMassedCollider does the rest of collision
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> be1e265c5623fdb15988227e8c494b15d34e434d

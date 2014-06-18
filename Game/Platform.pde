@@ -21,4 +21,8 @@ class Platform extends MassedBeing {
     rect(0,0,width,HEIGHT);
   }
 }
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> be1e265c5623fdb15988227e8c494b15d34e434d

@@ -8,4 +8,8 @@ class World1 extends World {
     println("player created");
     currentWorld.register(player,true);
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> be1e265c5623fdb15988227e8c494b15d34e434d
